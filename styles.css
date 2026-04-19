@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+.hero-section {
+  @apply py-24 sm:py-32 flex flex-col justify-center min-h-[80vh];
+}
+
+.section {
+  @apply py-20 sm:py-28;
+}
+
+.section-title {
+  @apply font-fraunces font-bold text-3xl sm:text-4xl mb-6 text-center tracking-[-0.05em] text-var(--text);
+}
+
+.section-subtitle {
+  @apply text-lg text-var(--text-dim) mb-8 max-w-3xl mx-auto;
+}
+
+.project-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.project-card {
+  @apply bg-white p-6 rounded-lg shadow-sm border border-var(--surface) transition-all duration-300 hover:shadow-md hover:translate-y-[-4px] flex flex-col;
+}
+
+.project-card h3 {
+  @apply font-fraunces font-semibold text-xl mb-2 text-var(--text);
+}
+
+.project-card p {
+  @apply text-var(--text-dim) mb-4 flex-grow;
+}
+
+.contact-form {
+  @apply bg-var(--surface) p-8 rounded-lg shadow-sm max-w-2xl mx-auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  @apply w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-var(--accent) focus:border-transparent transition-all duration-200;
+}
+
+.contact-form button {
+  @apply mt-4 bg-var(--accent) hover:bg-var(--accent-alt) text-white font-semibold py-3 px-6 rounded transition-colors duration-200;
+}
+
+.text-dim {
+  color: var(--text-dim);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(26, 46, 26, 0.1);
+}
+
+.focus-glow:focus {
+  @apply ring-2 ring-var(--accent) ring-opacity-50;
+}
+
+/* Typography classes */
+.font-fraunces {
+  font-family: 'Fraunces', serif;
+}
+
+.text-display {
+  @apply font-fraunces font-bold tracking-[-0.05em] text-var(--text);
+}
+
+.text-body {
+  @apply text-var(--text-dim) leading-6;
+}
+
+.max-width-prose {
+  max-width: 65ch;
+}

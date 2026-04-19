@@ -1,0 +1,3 @@
+-- No database required — all functionality is client-side or handled by Vercel serverless functions.
+-- Contact form submissions are processed by api/contact.ts using Resend and do not touch Supabase.
+-- No tables, storage buckets, auth, or edge functions are used.
